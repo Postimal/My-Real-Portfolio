@@ -321,6 +321,8 @@ main#home .home-right {
 main#home .home-right .portrait-avatar {
   width: 30vw;
   height: 30vw;
+  max-width: 320px;
+  max-height: 320px;
   border-radius: 50%;
   border: 3px solid #5CDB95;
   object-fit: cover;

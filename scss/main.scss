@@ -188,6 +188,8 @@ main {
             .portrait-avatar {
                 width: 30vw;
                 height: 30vw;
+                max-width: 320px;
+                max-height: 320px;
                 border-radius: 50%;
                 border: 3px solid $secondary-color;
                 object-fit: cover;
