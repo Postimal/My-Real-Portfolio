@@ -170,8 +170,34 @@ main {
 
     &#home {
         overflow:hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .home-left {
+            flex: 1;
+        }
+
+        .home-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            padding-left: 2rem;
+
+            .portrait-avatar {
+                width: 30vw;
+                height: 30vw;
+                max-width: 320px;
+                max-height: 320px;
+                border-radius: 50%;
+                border: 3px solid $secondary-color;
+                object-fit: cover;
+            }
+        }
+
         h1 {
-            margin-top: 4vh
+            margin-top: 4vh;
         }
         .small-heading i {
             float: right;
