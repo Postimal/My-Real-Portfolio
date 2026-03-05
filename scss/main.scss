@@ -185,12 +185,12 @@ main {
             flex: 0 0 auto;
             padding-left: 2rem;
 
-            .bitmoji-avatar {
-                width: 280px;
-                height: 280px;
+            .portrait-avatar {
+                width: 30vw;
+                height: 30vw;
                 border-radius: 50%;
                 border: 3px solid $secondary-color;
-                background: rgba(lighten($primary-color, 10), 0.4);
+                object-fit: cover;
             }
         }
 

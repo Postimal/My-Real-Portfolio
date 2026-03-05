@@ -66,9 +66,9 @@
     padding-left: 0;
     padding-top: 2rem;
   }
-  main#home .home-right .bitmoji-avatar {
-    width: 180px;
-    height: 180px;
+  main#home .home-right .portrait-avatar {
+    width: 50vw;
+    height: 50vw;
   }
   ul.menu-nav,
   div.menu-branding {
@@ -318,12 +318,12 @@ main#home .home-right {
   flex: 0 0 auto;
   padding-left: 2rem;
 }
-main#home .home-right .bitmoji-avatar {
-  width: 280px;
-  height: 280px;
+main#home .home-right .portrait-avatar {
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
   border: 3px solid #5CDB95;
-  background: rgba(110.5, 110.5, 110.5, 0.4);
+  object-fit: cover;
 }
 main#home h1 {
   margin-top: 4vh;
