@@ -521,7 +521,6 @@ main#home .small-heading i.first {
   cursor: pointer;
 }
 .list-container .technology-info .learn-more {
-  visibility: hidden;
   margin: auto;
   padding: 1rem;
   background: rgb(97.75, 97.75, 97.75);
