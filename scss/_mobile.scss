@@ -41,7 +41,21 @@
             .about-me {
                 padding: 2rem;
             }
-        }   
+        }
+
+        &#home {
+            flex-direction: column;
+
+            .home-right {
+                padding-left: 0;
+                padding-top: 2rem;
+
+                .bitmoji-avatar {
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
     }
 
     ul.menu-nav,
@@ -128,7 +142,7 @@
     main#home {
         padding: 3rem 1rem;
     }
-    &.small-heading {
+    .small-heading {
         font-size: 1.4rem;
     }
     .projects-box{
