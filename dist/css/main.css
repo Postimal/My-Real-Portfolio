@@ -114,6 +114,14 @@
 * {
   box-sizing: border-box; }
 
+#bond-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
 body {
   background: #444;
   color: #C2CAD0;
@@ -121,19 +129,6 @@ body {
   margin: 0;
   font-family: "Open sans", sans-serif;
   line-height: 1.4; }
-  body#bg-image {
-    background: url(../img/background.jpg);
-    background-attachment: fixed;
-    background-size: cover; }
-    body#bg-image:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
 
 h1, h2, h3, h4 {
   margin: 0;
