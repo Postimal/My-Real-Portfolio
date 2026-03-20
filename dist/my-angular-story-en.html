@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <title>Angular Evolution I've Experienced: Version 8 to 20</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="random-page">
+    <canvas id="bond-canvas"></canvas>
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="portrait"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link"><span class="text-secondary">H</span>ome</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About m<span class="text-secondary">e</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link"><span class="text-secondary">P</span>rojects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link">Skill<span class="text-secondary">s</span></a>
+                </li>
+                <li class="nav-item current">
+                    <a href="my-angular-story-en.html" class="nav-link"><span class="text-secondary">A</span>ngular Story</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link"><span class="text-secondary">G</span>et in touc<span
+                            class="text-secondary">h</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="story-header">
+            <div class="language-switch" aria-label="Language switch">
+                <span>PL</span>
+                <label class="lang-toggle" for="languageSwitchEn">
+                    <input id="languageSwitchEn" type="checkbox" aria-label="Switch language to Polish" checked>
+                    <span class="lang-slider"></span>
+                </label>
+                <span>EN</span>
+            </div>
+            <h1>Angular Evolution I've Experienced</h1>
+            <p>A Journey from Version 8 to Version 20</p>
+        </div>
+
+        <!-- Section 0: Angular 8 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 8</span>
+                <span>Stability and Differential Loading</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Differential loading
+                                    <span class="feature-description">Modern and legacy browsers get separate bundles.<br>Newer devices download lighter code faster.<br>Better startup time without losing compatibility.</span>
+                                </li>
+                                <li>Dynamic imports for lazy routes
+                                    <span class="feature-description">Lazy routes load only when users need them.<br>The initial application bundle becomes smaller.<br>Navigation in large apps feels smoother.</span>
+                                </li>
+                                <li>Web Worker support via CLI
+                                    <span class="feature-description">Heavy computations can run off the main UI thread.<br>The interface stays responsive during processing.<br>It is easier to handle expensive tasks in background.</span>
+                                </li>
+                                <li>Builder API improvements
+                                    <span class="feature-description">You gain better control over the build process.<br>Pipeline customization becomes more straightforward.<br>Fewer workarounds and custom CI scripts are needed.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>Old Http module treated as legacy</li>
+                                <li>Node 8 support phased out</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">ng update @angular/cli@8 @angular/core@8
+// Differential loading enabled by default</div>
+                </div>
+                <div class="image-box">🧩 Angular 8</div>
+            </div>
+        </div>
+
+        <!-- Section 0.5: Angular 9 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 9</span>
+                <span>Ivy by Default</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Ivy compiler as default
+                                    <span class="feature-description">The new compiler is enabled by default in new projects.<br>Generated code is more optimized.<br>Build and test runs usually finish faster.</span>
+                                </li>
+                                <li>Improved AOT and type checking
+                                    <span class="feature-description">Template errors are caught earlier at compile time.<br>There are fewer runtime surprises in production.<br>Large components are easier to maintain safely.</span>
+                                </li>
+                                <li>Smaller bundle sizes
+                                    <span class="feature-description">The application downloads less data on startup.<br>This is especially visible on slower connections.<br>First render responsiveness improves.</span>
+                                </li>
+                                <li>Faster testing workflows
+                                    <span class="feature-description">Unit tests execute more efficiently.<br>Teams get feedback in a shorter loop.<br>Daily iterations become faster and smoother.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>View Engine placed on deprecation path</li>
+                                <li>Older renderer APIs started phasing out</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">ng version
+// Angular CLI: 9.x
+// Ivy: enabled</div>
+                </div>
+                <div class="image-box">⚙️ Angular 9</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Angular 10 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 10</span>
+                <span>Initial Foundation</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>TypeScript 3.9 support
+                                    <span class="feature-description">Fewer false positives during compilation.<br>Faster type checking in larger projects.<br>Easier refactors without breaking the build.</span>
+                                </li>
+                                <li>Zone.js improvements
+                                    <span class="feature-description">More stable UI change detection.<br>Fewer unexpected component re-renders.<br>Better performance in complex views.</span>
+                                </li>
+                                <li>New date range picker component
+                                    <span class="feature-description">Quick implementation of date range selection.<br>Consistent UX without building a custom widget.<br>Less code needed for form handling.</span>
+                                </li>
+                                <li>Improved language service
+                                    <span class="feature-description">Better code hints in the editor.<br>Faster navigation across templates and types.<br>Less time spent debugging typos.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>TSLint support starts to phase out</li>
+                                <li>Legacy browser support marked for removal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">ng version
+// Output: Angular 10.0.0
+                    </div>
+                </div>
+                <div class="image-box">📦 Angular 10 Release</div>
+            </div>
+        </div>
+
+        <!-- Section 2: Angular 11 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 11</span>
+                <span>Improved Workflows</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Major Updates</h3>
+                            <ul>
+                                <li>Automatic font inlining
+                                    <span class="feature-description">Fonts load faster on initial page render.<br>Fewer extra requests to external resources.<br>Improved Lighthouse rendering score.</span>
+                                </li>
+                                <li>Component testing utilities
+                                    <span class="feature-description">Simpler component test setup.<br>Easier mocking of dependencies and inputs.<br>More confidence when changing the UI.</span>
+                                </li>
+                                <li>Angular DevTools released
+                                    <span class="feature-description">Inspect the component tree in the browser.<br>Quickly spot performance bottlenecks.<br>Better change detection diagnostics.</span>
+                                </li>
+                                <li>Ivy engine optimizations
+                                    <span class="feature-description">Lighter production bundles.<br>Faster startup on first load.<br>Smoother local and CI builds.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>Support for Webpack 4 based flows deprecated</li>
+                                <li>Legacy i18n extraction workflow superseded</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">ng update @angular/cli @angular/core</div>
+                </div>
+                <div class="image-box">🔧 Angular 11 Tools</div>
+            </div>
+        </div>
+
+        <!-- Section 3: Angular 12 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 12</span>
+                <span>Ivy as Default</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Major Changes</h3>
+                            <ul>
+                                <li><span class="highlight">Ivy engine becomes default</span>
+                                    <span class="feature-description">New projects use the new engine by default.<br>Better optimization of compiler-generated code.<br>Fewer differences between dev and prod.</span>
+                                </li>
+                                <li>Support for TypeScript 4.2+
+                                    <span class="feature-description">Modern language features are available immediately.<br>Stronger typing in domain-level code.<br>Easier maintenance of large data models.</span>
+                                </li>
+                                <li>Strict mode by default
+                                    <span class="feature-description">More issues are caught before runtime.<br>Safer templates and component contracts.<br>Higher code quality in new modules.</span>
+                                </li>
+                                <li>Build pipeline cleanup
+                                    <span class="feature-description">Fewer legacy steps in the build pipeline.<br>Cleaner development tooling configuration.<br>Easier migration to later Angular versions.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>View Engine officially deprecated</li>
+                                <li>IE11 support enters final deprecation window</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">// Angular 12 - Strict mode
+{
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  }
+}</div>
+                </div>
+                <div class="image-box">⚙️ Ivy Engine</div>
+            </div>
+        </div>
+
+        <!-- Section 4: Angular 13 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 13</span>
+                <span>RxJS 7 & Ivy Enhancements</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Significant Updates</h3>
+                            <ul>
+                                <li>RxJS 7 requirement
+                                    <span class="feature-description">New operators and more consistent stream APIs.<br>Simpler subscription and cleanup management.<br>Fewer edge cases in async logic.</span>
+                                </li>
+                                <li>IE11 support ended
+                                    <span class="feature-description">No need to maintain legacy polyfills.<br>Smaller bundles and cleaner frontend code.<br>Better focus on modern browsers.</span>
+                                </li>
+                                <li>New form control StatusChanges
+                                    <span class="feature-description">React faster to control state changes.<br>Handle pending, valid, and invalid states easily in UI.<br>Forms become more interactive and predictable.</span>
+                                </li>
+                                <li>Improved build performance
+                                    <span class="feature-description">Shorter local compile times.<br>Faster feedback loop during development.<br>More efficient CI/CD pipelines.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>View Engine rendering pipeline removed</li>
+                                <li>IE11 targeted polyfill strategy deprecated</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">// RxJS 7 syntax
+observable$.pipe(
+  takeUntil(destroy$)
+).subscribe(data => {});</div>
+                </div>
+                <div class="image-box">📡 RxJS 7</div>
+            </div>
+        </div>
+
+        <!-- Section 5: Angular 14 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 14</span>
+                <span>Standalone Components</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Paradigm Shift</h3>
+                            <ul>
+                                <li><span class="highlight">Standalone components (preview)</span>
+                                    <span class="feature-description">Build components without heavy NgModule setup.<br>Easier to split the app into smaller units.<br>Faster onboarding for new features.</span>
+                                </li>
+                                <li>Typed reactive forms
+                                    <span class="feature-description">FormControl and FormGroup use strict typing.<br>Fewer mistakes when reading form values.<br>Better IDE support for validations.</span>
+                                </li>
+                                <li>Enhanced routing API
+                                    <span class="feature-description">Route configuration becomes more declarative.<br>Easier lazy loading and guard setup.<br>Better readability in large applications.</span>
+                                </li>
+                                <li>Meta package release
+                                    <span class="feature-description">Simplified Angular package management.<br>Easier framework dependency updates.<br>Fewer version conflicts in the workspace.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>Class based guards and resolvers deprecated</li>
+                                <li>Old typed-forms workarounds no longer recommended</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">@Component({
+  standalone: true,
+  imports: [CommonModule],
+  template: '...'
+})
+export class MyComponent {}</div>
+                </div>
+                <div class="image-box">🎯 Standalone APIs</div>
+            </div>
+        </div>
+
+        <!-- Section 6: Angular 15 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 15</span>
+                <span>Standalone by Default</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Production Ready</h3>
+                            <ul>
+                                <li>Standalone components stable
+                                    <span class="feature-description">Use standalone APIs safely in production.<br>Application architecture becomes lighter.<br>Less boilerplate in new business modules.</span>
+                                </li>
+                                <li>Improved dependency injection
+                                    <span class="feature-description">Improved service injection ergonomics.<br>Easier control of provider scopes.<br>More predictable application behavior.</span>
+                                </li>
+                                <li><span class="highlight">New control flow syntax preview</span>
+                                    <span class="feature-description">Templates become easier for teams to read.<br>Fewer nested structural directives.<br>Faster authoring of conditions and loops.</span>
+                                </li>
+                                <li>Enhanced TypeScript 4.8 support
+                                    <span class="feature-description">Better compatibility with newer toolchains.<br>More fixes for unknown type narrowing.<br>More stable builds with newer TypeScript.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>NgModule-first project scaffolding deprecated</li>
+                                <li>Legacy builder defaults superseded</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">@Component({
+  standalone: true,
+  selector: 'app-root'
+})
+export class AppComponent {}</div>
+                </div>
+                <div class="image-box">🚀 Standalone Ready</div>
+            </div>
+        </div>
+
+        <!-- Section 7: Angular 16 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 16</span>
+                <span>Signals & Reactivity</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Major Features</h3>
+                            <ul>
+                                <li><span class="highlight">Angular Signals released</span>
+                                    <span class="feature-description">Reactivity becomes more predictable.<br>Less manual subscription handling in components.<br>Better performance with frequent state updates.</span>
+                                </li>
+                                <li>New control flow syntax
+                                    <span class="feature-description">Conditions and loops are shorter and clearer.<br>Templates feel closer to modern app code.<br>Easier code reviews and view maintenance.</span>
+                                </li>
+                                <li>Hydration support
+                                    <span class="feature-description">SSR becomes interactive faster on the client.<br>Less content flicker after page load.<br>Better Core Web Vitals for the app.</span>
+                                </li>
+                                <li>Required input properties
+                                    <span class="feature-description">Components immediately report missing required inputs.<br>Integration issues are caught during development.<br>Component APIs become clearer and stricter.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>Zone.js-centric reactivity patterns deprecated</li>
+                                <li>Constructor param decorators for inputs deprecated</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">import { signal } from '@angular/core';
+
+count = signal(0);
+increment() {
+  this.count.update(c => c + 1);
+}</div>
+                </div>
+                <div class="image-box">⚡ Signals</div>
+            </div>
+        </div>
+
+        <!-- Section 8: Angular 17 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 17</span>
+                <span>Control Flow & DI</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Developer Experience</h3>
+                            <ul>
+                                <li><span class="highlight">New control flow</span> (@if, @for, @switch)
+                                    <span class="feature-description">Templates are shorter and closer to JS logic.<br>Fewer star-prefixed directives for simple cases.<br>The code is easier for newcomers to learn.</span>
+                                </li>
+                                <li>Deferred loading with @defer
+                                    <span class="feature-description">Load heavy sections only when needed.<br>Initial rendering becomes noticeably faster.<br>Users see critical content sooner.</span>
+                                </li>
+                                <li>Stable hydration support
+                                    <span class="feature-description">SSR and CSR work more reliably in production.<br>Fewer mismatches between HTML and app state.<br>Better user experience after page refresh.</span>
+                                </li>
+                                <li>Improved CLI performance
+                                    <span class="feature-description">Faster project generation and builds.<br>Shorter wait times in daily workflows.<br>More efficient development iterations.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>Structural directives for basic control flow deprecated</li>
+                                <li>Some decorator-based query APIs marked for deprecation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">@if (isVisible) {
+  &lt;p&gt;Visible&lt;/p&gt;
+} @else {
+  &lt;p&gt;Hidden&lt;/p&gt;
+}</div>
+                </div>
+                <div class="image-box">🎨 Control Flow</div>
+            </div>
+        </div>
+
+        <!-- Section 9: Angular 18 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 18</span>
+                <span>Zoneless & Performance</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Cutting Edge</h3>
+                            <ul>
+                                <li><span class="highlight">Zoneless Angular (preview)</span>
+                                    <span class="feature-description">Reduce dependency on the Zone.js mechanism.<br>Gain better control over UI update cycles.<br>Potentially lower runtime overhead.</span>
+                                </li>
+                                <li>Signal-based APIs
+                                    <span class="feature-description">New state APIs align with Signals.<br>Easier reactive components without RxJS overhead.<br>Clearer data flow in views.</span>
+                                </li>
+                                <li>Improved SSR support
+                                    <span class="feature-description">Better tooling for server-side rendering.<br>More stable behavior in hybrid applications.<br>Improved SEO and faster first paint.</span>
+                                </li>
+                                <li>TypeScript 5.2+ required
+                                    <span class="feature-description">The framework leverages newer TS capabilities.<br>Better compatibility with the modern ecosystem.<br>Fewer issues from compiler version differences.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>Zone-dependent change detection assumptions deprecated</li>
+                                <li>Legacy server rendering APIs phased out</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">// Zoneless configuration
+bootstrapApplication(AppComponent, {
+  providers: [provideExperimentalZonelessChangeDetection()]
+});</div>
+                </div>
+                <div class="image-box">🔋 Zoneless</div>
+            </div>
+        </div>
+
+        <!-- Section 10: Angular 19 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 19</span>
+                <span>Modern Framework Era</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Latest Innovations</h3>
+                            <ul>
+                                <li>Zoneless by default
+                                    <span class="feature-description">New apps start without Zone.js by default.<br>Less hidden magic in change detection.<br>Simpler performance analysis for components.</span>
+                                </li>
+                                <li>Improved Angular DevTools
+                                    <span class="feature-description">More accurate component rendering profiles.<br>Faster identification of performance regressions.<br>Better day-to-day debugging support.</span>
+                                </li>
+                                <li>Enhanced form validation
+                                    <span class="feature-description">Validation flows are more flexible and readable.<br>Easier to build user-facing error messages.<br>Less repetitive form code.</span>
+                                </li>
+                                <li>Better performance metrics
+                                    <span class="feature-description">Better insight into real rendering costs.<br>Easier monitoring of post-release regressions.<br>Simpler prioritization of optimization work.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>Explicit Zone.js bootstrap configuration deprecated</li>
+                                <li>Old test zone helpers replaced by modern defaults</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">import { provideZonelessChangeDetection } 
+  from '@angular/core';
+
+bootstrap config uses stable zoneless
+configuration by default now</div>
+                </div>
+                <div class="image-box">🌟 Angular 19</div>
+            </div>
+        </div>
+
+        <!-- Section 11: Angular 20 -->
+        <div class="section">
+            <h2>
+                <span class="version-badge">Angular 20</span>
+                <span>Future Ready</span>
+            </h2>
+            <div class="content">
+                <div class="text-box">
+                    <div class="feature-columns">
+                        <div class="feature-panel">
+                            <h3>Latest Release</h3>
+                            <ul>
+                                <li>Enhanced performance optimization
+                                    <span class="feature-description">The engine takes better advantage of modern browsers.<br>Critical view rendering becomes faster.<br>The app scales better under heavy traffic.</span>
+                                </li>
+                                <li>Improved developer tooling
+                                    <span class="feature-description">CLI and debugging tools are more integrated.<br>Issues are diagnosed faster during development.<br>The daily workflow is less frustrating.</span>
+                                </li>
+                                <li>Advanced signal utilities
+                                    <span class="feature-description">Easier modeling of complex state dependencies.<br>Less manual wiring of reactive logic.<br>Better organization of domain code.</span>
+                                </li>
+                                <li>Future web standards support
+                                    <span class="feature-description">The framework supports new web standards faster.<br>Your project is better prepared for upcoming years.<br>Fewer costly migrations in the future.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-panel deprecated">
+                            <h3>Deprecated Features</h3>
+                            <ul>
+                                <li>Fallback compatibility mode APIs deprecated</li>
+                                <li>Remaining legacy rendering hooks marked deprecated</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="code-block">// Angular 20+ 
+ng version
+// Angular: 20.0.0+
+// Ready for next decade</div>
+                </div>
+                <div class="image-box">🚀 Angular 20+</div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="main-footer">Michał Postek, Copyright &copy; <span class="text-secondary">2019</span></footer>
+
+    <script>
+        (function () {
+            const switcher = document.getElementById('languageSwitchEn');
+            if (!switcher) return;
+            switcher.checked = true;
+            switcher.addEventListener('change', function () {
+                if (!switcher.checked) {
+                    window.location.href = 'my-angular-story.html';
+                }
+            });
+        })();
+    </script>
+    <script src="js/main.js"> </script>
+    <script src="js/background.js"></script>
+</body>
+</html>
